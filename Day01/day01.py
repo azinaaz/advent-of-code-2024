@@ -1,4 +1,4 @@
-file = open("01data.txt" , "r")
+file = open("Day01\\01data.txt" , "r")
 data = file.readlines()
 x=[]
 y=[]
