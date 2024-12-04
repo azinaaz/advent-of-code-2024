@@ -1,15 +1,16 @@
 import re
 with open('Day03\Day03.txt', 'r') as file:
     file_contents = file.read()
-    s=[]
+    s1=[]
+    s2=[]
     x = re.findall(r"mul\(\d{1,3},\d{1,3}\)", file_contents)
     for i in x:
         a = i[4:-1]
         z, y = a.split(',')
 
-        s.append(int(z)*int(y))
+        s1.append(int(z)*int(y))
 
-    print(sum(s))
+    print(sum(s1))
 
 
     d = re.findall(r"do\(\)|don't\(\)|mul\(\d{1,3},\d{1,3}\)", file_contents)
@@ -23,9 +24,9 @@ with open('Day03\Day03.txt', 'r') as file:
             a = i[4:-1]
             z, y = a.split(',')
 
-            s.append(int(z)*int(y))
+            s2.append(int(z)*int(y))
 
-    print(sum(s))
+    print(sum(s2))
 
 
 
